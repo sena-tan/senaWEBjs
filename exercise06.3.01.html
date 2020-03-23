@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The confirm interaction </title>
+  </head>
+  <body>
+    <h3> The confirm interaction</h3>
+    <script>
+          var likeBananas;
+          /*We're using confirm() to prompt the user for a boolean value*/
+          likeBananas = confirm("Do you like bananas? ([OK] for yes, [Cancel] for no)");
+          /*On next line we check the value and ... */
+          if (likeBananas) {
+                  /*on next line write some output if the value was true*/
+                  document.write("You like Bananas!")
+          } else {
+                  /*on next line write some output if the value was false*/
+                  document.write("You don't like babanas!")
+          }
+          /*The code outside the curly braces of the if else statement will always run.*/
+          console.log ("Whether or not you had bananas, have a good day!");
+    </script>
+  </body>
+</html>

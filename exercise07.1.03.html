@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accessing an array </title>
+</head>
+
+<body>
+    <h3>Accessing an array </h3>
+    <div id="thearray"></div>
+    <script>
+        var color = ["red", "green", "blue"];
+        var primes = [2, 3, 5, 7, 11];
+        var newArray = []; // newArray = ["green", "blue", "yellow", 2, 3, 7, 13]
+        color.shift()
+        color.push("yellow")
+        console.log(color)
+        primes[2] = 7;
+        primes[3] = 13;
+        primes.pop()
+        console.log(primes)
+        newArray = color.concat(primes)
+        console.log(newArray)
+
+        var cars = ["Opel", "Toyota", "Ford"];
+        var len = cars.length;
+        var text = "";
+        for (var i = 0; i < len; i++) {
+            text += cars[i] + "\n";
+        }
+        console.log(text)
+
+        // for (i = 10; i >= 3; i++) {
+        //     alert("Welcome!");
+        // }
+    </script>
+</body>
+
+</html>

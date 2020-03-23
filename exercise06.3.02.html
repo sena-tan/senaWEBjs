@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nested contitionals </title>
+</head>
+
+<body>
+    <h3> Nested contitionals</h3>
+    <script>
+        var likeBananas;
+        var favoritFruit;
+        likeBananas = confirm("Do you like bananas? ([OK] for yes, [Cancel] for no)");
+        if (likeBananas) {
+            document.write("You like Bananas!")
+        } else {
+            favoritFruit = prompt("What is your favorite fruit")
+
+            if (favoritFruit == "apples") {
+                document.write("You like apples! Me too!")
+            } else {
+                document.write("You like " + favoritFruit + "! I prefer apples!")
+            }
+
+        }
+        console.log("All fruits are good!");
+    </script>
+</body>
+
+</html>

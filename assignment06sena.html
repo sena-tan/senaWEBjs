@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Temperature converter</title>
+</head>
+
+<body>
+    <h3> Temperature converter</h3>
+    <h4>Fahrenheit to Celsius </h4>
+    <p>The script tag contains a function called <span style="font-family: monospace;">convertFtoC()</span>,
+        which, at the moment, do nothing. You're going to edit this script to provide the code that
+        makes this function work to convert Fahrenheit to Celsius. <br>
+        You can test your code with the form field below, your
+        conversion code will run whenever you change the content of the input
+        field.
+    </p>
+    <p>If the user types in values that are not numbers, inform him.</p>
+    <p>Remember that the formula for converting temperature looks like this:</p>
+    <span><sup>o</sup>C x 9/5 + 32 = <sup>o</sup>F<br>
+        <br>
+        (<sup>o</sup>F - 32) x 5/9 = <sup>o</sup>C</span><br>
+    <br>
+
+    <input size="3" id="inputF"><sup>o</sup>F is equal to <span id="outputC"></span><sup>o</sup>C
+    <script>
+        var convertFtoC = document.getElementById("inputF");
+        convertFtoC.onchange = function () {
+        var degreesF = document.getElementById("inputF").value;
+            if (isNaN(degreesF)) {
+                document.getElementById("outputC").innerHTML = "I can't convert to "
+            } else {
+                var degreesC = (degreesF -32)* 5/9; 
+                document.getElementById("outputC").innerHTML = degreesC;
+            }
+        }
+    </script>
+</body>
+
+</html>
