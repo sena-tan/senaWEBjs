@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event calls function</title>
+</head>
+<body onload="askUser()">  <!--The onload event calls the function askUser().-->
+    <h3>Event calls function</h3>
+    
+    <script>
+        var visitorName = prompt("What is your name?"); 
+        var visitorAge = prompt("How old are you?");
+        //prompt() is a predefined function, automatically executed from JavaScript when the page loads.
+        // We assign the functions to variables because we want to use these in the ask User() function.
+        function askUser(){   /*Defining the function.*/
+            document.write("Your name is " + visitorName + " and you are " + visitorAge + " years old!" );
+        }
+    </script>
+    
+</body >
+</html>

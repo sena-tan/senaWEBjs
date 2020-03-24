@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odd or Even? </title>
+</head>
+
+<body>
+    <h3>Odd or Even? </h3>
+
+    <script>
+        var numWritten = prompt("Write a natural number"); //1. We ask the user to insert a number
+        var num = parseInt(numWritten) // 2. This function parses the previus string argument and returns an integer
+        function response(num) { /*4. We pass the arguments as num parameter*/
+            if (isNaN(numWritten)) {
+                document.write("This isn't a number!");
+            } else {
+                document.write("The written number is ..." + num + " and ");
+                //5. In the next if statement we call the function oddOReven() and we pass num as argument. 
+                //6. The returned value is used in the conditional.
+                if (oddOReven(num) == "even") { document.write("this is an even number!") }
+                else { document.write("this is an odd number!") }
+            }
+        }
+        function oddOReven(num) { //4. The function oddOReven() accepts the num as argument.
+            if (num % 2 == 0) { return "even" } // 5. The function oddOReven() returns a value
+        }
+        response(num); //3. We are calling the response() with arguemnt num.
+    </script>
+
+</body>
+
+</html>

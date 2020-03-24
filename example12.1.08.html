@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <body onload="do_it(4)">
+ 
+<script>
+     function do_it(time) {
+       if (good(time)) {
+         alert("Good!");
+       } else if (bad(time)) {
+         alert("Bad!");
+       } else {
+         alert("OK!");
+       }
+     }
+  function good(time) {
+       if (time <= 3) {
+         return true;
+       } else {
+         return false;
+       }
+     }  
+   function bad(time) {
+       if (time >= 5) {
+         return true;
+       } else {
+         return false;
+       }
+     }
+   </script>
+   </body>
+</html>

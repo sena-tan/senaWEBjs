@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parameters and arguments </title>
+</head>
+<body>  
+    <h3>Parameters and arguments </h3>
+    
+    <script>
+        function askUser(visitorName, visitorAge ){
+            /*2. We pass the arguments as visitorName, visitorAge parameters*/
+            document.write("Your name is " + visitorName + " and you are " + visitorAge + " years old!" );
+            compare(visitorAge); //3. The function askUser() calls the function compare() with argument visitorAge
+        }
+        function compare (visitorAge) { //4. The function compare() accepts the visitorAge as parameter
+            if (visitorAge<=24) {document.write(" You have a perfect age!")}
+            else {document.write(" You are a bit old!")}
+        }
+        askUser("bb" , 30);  //1. We are calling the askUser() with arguemnts  "bb" and 30.
+        document.write("<br>");
+        askUser("cc" , 3);   //1. We recall the askUser() with arguemnts  "cc" and 3.
+        document.write("<br>");
+        askUser("mmmmmmmmm" , 24); //1. We recall the askUser() with arguemnts  "mmmmmmmmm" and 24.
+        
+    </script>
+</body>
+</html>

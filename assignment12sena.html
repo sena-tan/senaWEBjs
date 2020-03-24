@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructor syntax</title>
+</head>
+
+<body>
+    <h1>Constructor syntax</h1>
+    <script>
+        // Create your own Construction function
+        // https://elearn.ellak.gr/mod/book/view.php?id=5482
+        function myDate(w, d, m, y) {
+            this.wday = w;
+            this.day = d;
+            this.month = m;
+            this.year = y;
+        }
+        // Use the new keyword to define two new objects via the Construction function
+        var bday = new myDate ("Friday ",21," June ",1991)
+        var dday = new myDate ("Tuesday ",6," June ",1944)
+
+        // Use the document.write to appear these objects to the browser
+        document.write(bday.wday + bday.day + bday.month + bday.year)
+        document.write(dday.wday + dday.day + dday.month + dday.year)
+
+       //Iterate over the first object to extract its values to the console
+       // https://elearn.ellak.gr/mod/book/view.php?id=5481&chapterid=3715
+       for (var x in bday) {
+        console.log ( x + " :" + bday[x] );
+    }    
+    </script>
+</body>
+
+</html>

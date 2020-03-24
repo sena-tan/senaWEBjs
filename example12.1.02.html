@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A function calls another function</title>
+</head>
+<body onload="askUser()">  <!--The onload event calls the function askUser().-->
+    <h>A function calls another function</h>
+    
+    <script>
+        var visitorName = prompt("What is your name?"); 
+        var visitorAge = prompt("How old are you?");
+        //prompt() is a predefined function, automatically executed from JavaScript when the page loads.
+        // We assign the functions to variables because we want to use these in the ask User() function.
+        function askUser(){   /*Defining the function askUser().*/
+            document.write("Your name is " + visitorName + " and you are " + visitorAge + " years old!" );
+            document.write("<br>");
+            compare(); //The function askUser calls the function compare()
+        }
+        function compare () { //Defining the function compare().
+            if (visitorAge<=24) {document.write("You have a perfect age!")}
+            else {document.write("You are a bit old!")}
+        }
+    </script>
+
+</body >
+</html>

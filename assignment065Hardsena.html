@@ -1,25 +1,46 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Assignmet 06 - Javascript</title>
-    </head>
-    <body>
-        <h3> Divide your name into separate first and last name strings</h3>
-        <script>
-            var fullname;
-            fullname = prompt("What is your name?");
-            // Do your magic
-            console.log ( "Your visitor wrote : " + fullname  + "\n\n"  
-                            + "So his first name is: " + firstname +   "\n" 
-                            + " and"  + "\n" 
-                            + "his lastname is: " + lastname 
-            );
-            alert ( "You wrote : " + fullname  + "\n\n"  
-                            + "So your first name is: " + firstname +   "\n" 
-                            + " and"  + "\n" 
-                            + "your lastname is: " + lastname +"!" 
-            );
-            
-        </script>
-    </body>
+
+<head>
+    <title>Assignmet 06 - Javascript</title>
+</head>
+
+<body>
+    <div id="dialog-confirm" title="gender?">
+        <p>Αre you a male or female?</p>
+    </div>
+    <h3> Divide your name into separate first and last name strings</h3>
+    <script>
+        var fullname;
+        fullname = prompt("What is your name?");
+        // Do your magic
+
+
+        var spc = fullname.indexOf(" ");
+        var n = fullname.length;
+        var firstname = fullname.slice(0, spc)
+        var lastname = fullname.slice(spc, n)
+        console.log(spc)
+        console.log("Your visitor wrote : " + fullname + "\n\n"
+            + "So his first name is: " + firstname + "\n"
+            + " and" + "\n"
+            + "his lastname is: " + lastname
+        );
+        alert("You wrote : " + fullname + "\n\n"
+            + "So your first name is: " + firstname + "\n"
+            + " and" + "\n"
+            + "your lastname is: " + lastname + "!"
+        );
+
+        if (confirm("Would you like to be called by your first name?")) {
+            document.write("Hi "+firstname+ "!");
+        } else {
+            document.write("Hello "+fullname+".");
+        }
+        
+    </script>
+
+
+</body>
+
 </html>
