@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>Canvas image-bitmap array </title>
+     <style> canvas { border: 1px solid red;} </style>
+  </head>
+  <body>
+     <h3>Canvas image-bitmap array</h3>
+     <canvas id="myCanvas1" height="272" width="400"></canvas>
+     <script>
+        var canvas1 = document.getElementById("myCanvas1"); 
+        var context1 = canvas1.getContext('2d'); 
+        var image1 = new Image();
+        image1.src = "images/prototype.png";
+        image1.onload = function(){
+          context1.drawImage(image1, 0, 0);
+          /* now grab the ImageData object from the graphics context. This contains a 'bitmap' of every pixel in the image*/
+          var imgData1 = context1.getImageData(0,0, canvas1.width, canvas1.height); /* ImageData*/
+          console.log(imgData1)
+          /*grab the image bitmap data array so we can iterate over it*/
+          var pix = imgData1.data;
+          console.log(pix);
+        };
+     </script>
+  </body>
+</html>

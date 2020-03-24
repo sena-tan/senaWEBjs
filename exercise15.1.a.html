@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Canvas HTML element </title>
+       <style>
+           canvas { border: 1px solid blue;}
+       </style>
+   </head>
+   <body >
+       <h3>Canvas HTML element </h3>
+       <canvas id="myCanvas0" height="400" width="600"></canvas>
+       <canvas id="myCanvas1" height="400" width="600"></canvas>
+ 
+       <script>
+            /* We'll grab the canvas elements and the graphics contexts here*/
+            var canvas0 = document.getElementById("myCanvas0"); /* HTMLCanvasElement */
+            var context0 = canvas0.getContext('2d'); /* CanvasRenderingContext2D */
+            var canvas1 = document.getElementById("myCanvas1"); /* HTMLCanvasElement */
+            var context1 = canvas1.getContext('2d'); /* CanvasRenderingContext2D */
+ 
+            /* Let's add some text*/
+            context0.fillStyle = "blue";
+            context0.font = "3em Calibri";
+            context0.fillText("My TEXT!", 30, 110); /*use strokeText instead of fillText to see the difference*/
+ 
+            /* draw lines between opposite corners to make an X: */
+            /* Let's set some styles */
+            context0.strokeStyle = "red";
+            context0.lineWidth = "2";
+            /* call beginPath() to start the drawing path*/
+            context0.beginPath();
+            /* call moveTo() to position the pen at the starting point at one corner*/
+            context0.moveTo(0, 0);
+            /* call lineTo() to define a line to the opposite corner*/
+            context0.lineTo(context0.canvas.width, context0.canvas.height);
+            /* call moveTo() to position the pen at the starting point at one corner*/
+            context0.moveTo(context0.canvas.width, 0);
+            /* call lineTo() to define a line to the opposite corner*/
+            context0.lineTo(0, context0.canvas.height);
+            /* call stroke() to draw it */
+            context0.stroke();
+           /*
+            * We create a Javascript Image object and set its source URL
+            * to the location of the image file we'll be inserting.
+            */
+            var image0 = new Image();
+            image0.src = "images/chocolatethings.JPG";
+            /* Here's the handler that loads when the image has finished downloading. */
+            image0.onload = function(){
+                         /* draw the image in the canvas window */
+                          context1.drawImage(image0, 0, 0);
+            }
+       </script>
+   </body>
+</html>

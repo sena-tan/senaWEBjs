@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Canvas HTML element </title>
+       <style>
+           canvas { border: 1px solid blue;}
+       </style>
+   </head>
+   <body >
+       <h3>Canvas HTML element </h3>
+       <canvas id="myCanvas0" height="400" width="600"></canvas>
+ 
+       <script>
+            var canvas0 = document.getElementById("myCanvas0"); /* HTMLCanvasElement */
+            var context0 = canvas0.getContext('2d'); /* CanvasRenderingContext2D */
+
+            context0.fillStyle = "blue";
+            context0.font = "3em Calibri";
+            context0.fillText("My TEXT!", 30, 110); /*use strokeText instead of fillText to see the difference*/
+ 
+            context0.strokeStyle = "red";
+            context0.lineWidth = "2";
+            context0.beginPath();
+            context0.moveTo(0, 0);
+            context0.lineTo(context0.canvas.width, context0.canvas.height);
+            context0.moveTo(context0.canvas.width, 0);
+            context0.lineTo(0, context0.canvas.height);
+            context0.stroke();
+           
+
+            context0.beginPath();
+            context0.arc(300, 200, 80, 0, 2 * Math.PI);
+            context0.stroke();
+            
+       </script>
+   </body>
+</html>
