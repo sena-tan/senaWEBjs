@@ -2,13 +2,10 @@
 <html>
 
 <head>
-    <title>Assignmet 06 - Javascript</title>
+    <title>Assignment 06 - Javascript</title>
 </head>
 
 <body>
-    <div id="dialog-confirm" title="gender?">
-        <p>Αre you a male or female?</p>
-    </div>
     <h3> Divide your name into separate first and last name strings</h3>
     <script>
         var fullname;
@@ -17,27 +14,50 @@
 
 
         var spc = fullname.indexOf(" ");
-        var n = fullname.length;
+        var len = fullname.length;
         var firstname = fullname.slice(0, spc)
-        var lastname = fullname.slice(spc, n)
-        console.log(spc)
-        console.log("Your visitor wrote : " + fullname + "\n\n"
-            + "So his first name is: " + firstname + "\n"
-            + " and" + "\n"
-            + "his lastname is: " + lastname
-        );
-        alert("You wrote : " + fullname + "\n\n"
-            + "So your first name is: " + firstname + "\n"
-            + " and" + "\n"
-            + "your lastname is: " + lastname + "!"
-        );
+        var lastname = fullname.slice(spc + 1, len)
 
-        if (confirm("Would you like to be called by your first name?")) {
-            document.write("Hi "+firstname+ "!");
+
+        if (spc < 0) {
+            fullname = prompt("What is your full name?");
         } else {
-            document.write("Hello "+fullname+".");
+            console.log(spc)
+            console.log("Your visitor wrote : " + fullname + "\n\n"
+                + "So his first name is: " + firstname + "\n"
+                + " and" + "\n"
+                + "his lastname is: " + lastname);
+            alert("You wrote : " + fullname + "\n\n"
+                + "So your first name is: " + firstname + "\n"
+                + " and" + "\n"
+                + "your lastname is: " + lastname + "!");
+            if (confirm("Would you like to be called by your first name?")) {
+                document.write("Hi " + firstname + "!");
+            } else {
+                document.write("Hello " + fullname + ".");
+            }
         }
-        
+
+        // console.log(spc)
+        // while (spc = -1) {
+        //     fullname = prompt("What is your full name?");
+        // }
+        // console.log("Your visitor wrote : " + fullname + "\n\n"
+        //     + "So his first name is: " + firstname + "\n"
+        //     + " and" + "\n"
+        //     + "his lastname is: " + lastname);
+        // alert("You wrote : " + fullname + "\n\n"
+        //     + "So your first name is: " + firstname + "\n"
+        //     + " and" + "\n"
+        //     + "your lastname is: " + lastname + "!");
+        // if (confirm("Would you like to be called by your first name?")) {
+        //     document.write("Hi " + firstname + "!");
+        // } else {
+        //     document.write("Hello " + fullname + ".");
+        // }
+
+
+
     </script>
 
 
