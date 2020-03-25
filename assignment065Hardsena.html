@@ -12,51 +12,26 @@
         fullname = prompt("What is your name?");
         // Do your magic
 
-
         var spc = fullname.indexOf(" ");
+        var n = parseInt(spc)
         var len = fullname.length;
         var firstname = fullname.slice(0, spc)
         var lastname = fullname.slice(spc + 1, len)
-
-
-        if (spc < 0) {
-            fullname = prompt("What is your full name?");
+       
+        console.log(spc)
+        console.log("Your visitor wrote : " + fullname + "\n\n"
+            + "So his first name is: " + firstname + "\n"
+            + " and" + "\n"
+            + "his lastname is: " + lastname);
+        alert("You wrote : " + fullname + "\n\n"
+            + "So your first name is: " + firstname + "\n"
+            + " and" + "\n"
+            + "your lastname is: " + lastname + "!");
+        if (confirm("Would you like to be called by your first name?")) {
+            document.write("Hi " + firstname + "!");
         } else {
-            console.log(spc)
-            console.log("Your visitor wrote : " + fullname + "\n\n"
-                + "So his first name is: " + firstname + "\n"
-                + " and" + "\n"
-                + "his lastname is: " + lastname);
-            alert("You wrote : " + fullname + "\n\n"
-                + "So your first name is: " + firstname + "\n"
-                + " and" + "\n"
-                + "your lastname is: " + lastname + "!");
-            if (confirm("Would you like to be called by your first name?")) {
-                document.write("Hi " + firstname + "!");
-            } else {
-                document.write("Hello " + fullname + ".");
-            }
+            document.write("Hello " + fullname + ".");
         }
-
-        // console.log(spc)
-        // while (spc = -1) {
-        //     fullname = prompt("What is your full name?");
-        // }
-        // console.log("Your visitor wrote : " + fullname + "\n\n"
-        //     + "So his first name is: " + firstname + "\n"
-        //     + " and" + "\n"
-        //     + "his lastname is: " + lastname);
-        // alert("You wrote : " + fullname + "\n\n"
-        //     + "So your first name is: " + firstname + "\n"
-        //     + " and" + "\n"
-        //     + "your lastname is: " + lastname + "!");
-        // if (confirm("Would you like to be called by your first name?")) {
-        //     document.write("Hi " + firstname + "!");
-        // } else {
-        //     document.write("Hello " + fullname + ".");
-        // }
-
-
 
     </script>
 

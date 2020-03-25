@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <h1>Arrow functions</h1>
+    
+    <script>
+        // defining object
+        var rect = {
+            perimeter: (x, y) => (2*(x+y)),
+            area: (x, y) => (x*y)
+        };
+        //trying without arrow function
+        // let rect = {
+        //     perimeter: function (x, y) { return (2 * (x + y)); },
+        //     area: function (x, y) { return (x * y); }
+        // };
+
+        // l,b parameters
+        function solveRect(l,b) {
+            document.write("Solving for rectangle with l = " + l + " and b = " + b);
+            document.write("<br>");
+            if (l <= 0 || b <= 0) {
+                document.write("Rectangle dimensions should be greater than zero:  l = "
+                    + l + ",  and b = " + b);
+            }
+            else {
+                document.write("The area of the rectangle is " + rect.area(l,b) + 
+                " and the perimeter of the rectangle is " + rect.perimeter(l,b));
+            }
+            document.write("<br>");
+        }
+
+        //arguments
+        solveRect(2,4);
+        solveRect(3,5);
+        solveRect(0,5);
+        solveRect(-3,5);    
+    </script>
+
+</body>
+</html>

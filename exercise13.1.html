@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow functions2</title>
+</head>
+
+<body>
+    <h1>Arrow functions2</h1>
+
+    <script>
+        //Example 1
+        // let setNameIds = function setNameIds(id, name) {
+        //     return {
+        //         id: id, name: name
+        //     };
+        // };
+        var setNameIds = (id, name) => ({
+            id: id, name: name
+        })
+        document.write("id: " + setNameIds(4, "Nick").id + " , Name: " + setNameIds(4, "Nick")["name"]);
+
+        //Example 2
+        // let multiply = function (x, y) {
+        //     return x * y;
+        // };
+        var multiply = (x, y) => (x*y)
+        console.log(multiply(7, 7));
+
+        //Example 3
+        // let phraseSplitter = function phraseSplitter(phrase) {
+        //     return phrase.split(' ');
+        // };
+        let phraseSplitter = (phrase) => (phrase.split(' '))
+        console.log(phraseSplitter('WEB II Awesome'));
+
+    </script>
+
+</body>
+
+</html>
