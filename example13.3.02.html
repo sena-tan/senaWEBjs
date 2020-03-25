@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays as JSON</title>
+</head>
+<body>
+    <h1>Arrays as JSON</h1>
+    <p><b>An array is also valid JSON</b>, for example:</p>
+    <pre>
+        [
+            {
+                "name": "Molecule Man",
+                "age": 29,
+                "secretIdentity": "Dan Jukes",
+                "powers": [
+                "Radiation resistance",
+                "Turning tiny",
+                "Radiation blast"
+                ]
+            },
+            {
+                "name": "Madame Uppercut",
+                "age": 39,
+                "secretIdentity": "Jane Wilson",
+                "powers": [
+                "Million tonne punch",
+                "Damage resistance",
+                "Superhuman reflexes"
+                ]
+            }
+        ]
+    </pre>
+    <p>We want to access this array, so we assign it to the variable "superHeroes", in the "script" tag. </p>
+    <p>Try typing in the console the following commands:</p>
+    <ul>
+        <li>superHeroes[0]["powers"][0]</li>
+        <li>superHeroes[0].powers[1]</li>
+    </ul>
+    
+    <script>
+         let superHeroes = [
+            {
+                "name": "Molecule Man",
+                "age": 29,
+                "secretIdentity": "Dan Jukes",
+                "powers": [
+                "Radiation resistance",
+                "Turning tiny",
+                "Radiation blast"
+                ]
+            },
+            {
+                "name": "Madame Uppercut",
+                "age": 39,
+                "secretIdentity": "Jane Wilson",
+                "powers": [
+                "Million tonne punch",
+                "Damage resistance",
+                "Superhuman reflexes"
+                ]
+            }
+        ]
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays of objects</title>
+</head>
+
+<body>
+    <h1>Arrays of objects</h1>
+
+    <script>
+        let users = []; // Declaration of the array
+        users = ["John", "Anna", "Nick", "Mary"] // Definition of the array
+        // defining class
+        class User {
+            constructor(name) { //The constructor function 
+                this.name = name;
+            }
+            sayHi() {  // A method
+                alert(this.name);
+            }
+        }
+        // new objects creation and sayHi() calls for the objects 
+        for (i = 0; i < users.length; i++) {
+            let y = new User(users[i])
+            y.sayHi();
+            console.log(y);
+        } 
+    </script>
+
+</body>
+
+</html>

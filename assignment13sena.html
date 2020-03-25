@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leChocolat-aboutus arrays as JSON</title>
+</head>
+
+<body>
+    <h1>Arrays as JSON</h1>
+    <p><b>An array is also valid JSON</b>, for example:</p>
+    <pre>
+        [
+            {
+                "name": "Jim Alcon",
+                "role": "Chief Executive Officer",
+                "description": "Jim Alcon is the CEO of our company. He is responsible for the policy and strategy of our company."
+            },
+            {
+                "name": "Bill Peterson",
+                "role": "Chief Financial Officer",
+                "description": "Bill Peterson is the CFO of our company. He is responsible for all the financial decisions of our company."
+            },
+            {
+                "name": "John Cook",
+                "role": "Chef",
+                "description": "Our Chef, John Cook has specialized in the production of chocolates and he has created the receipts for our chocolates."
+            },
+            {
+                "name": "Vasilis Wilson",
+                "role": "Sous-chef",
+                "description": "Vasilis Wilson is well informed of all the current trends in pastry and contributes his innovative ideas in our products."
+            }
+            
+        ]
+    </pre>
+    <p>We want to access this array, so we assign it to the variable "people", in the "script" tag. </p>
+    <p>Try typing in the console the following commands:</p>
+    <ul>
+        <li>people[0]["name"][0]</li>
+        <li>people[0].role</li>
+    </ul>
+
+    <script>
+        let people = [
+            {
+                "name": "Jim Alcon",
+                "role": "Chief Executive Officer",
+                "description": "Jim Alcon is the CEO of our company. He is responsible for the policy and strategy of our company."
+            },
+            {
+                "name": "Bill Peterson",
+                "role": "Chief Financial Officer",
+                "description": "Bill Peterson is the CFO of our company. He is responsible for all the financial decisions of our company."
+            },
+            {
+                "name": "John Cook",
+                "role": "Chef",
+                "description": "Our Chef, John Cook has specialized in the production of chocolates and he has created the receipts for our chocolates."
+            },
+            {
+                "name": "Vasilis Wilson",
+                "role": "Sous-chef",
+                "description": "Vasilis Wilson is well informed of all the current trends in pastry and contributes his innovative ideas in our products."
+            }
+            
+        ]
+    </script>
+
+</body>
+
+</html>
