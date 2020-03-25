@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM event handling</title>
+  </head>
+  <body>
+    <h1>DOM event handling</h1>
+    <p id="toChange">Change my content.</p>
+    <button id="myBtn">Click me</button>
+    <script>
+      document.getElementById("myBtn").addEventListener("click", function() {
+        var elmnt = document.createElement("P");
+        var text = document.createTextNode("New paragraph");
+        elmnt.appendChild(text);
+        document.body.appendChild(elmnt);
+        document.getElementById("toChange").innerHTML = "Hello World";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recursions</title>
+</head>
+
+<body>
+    <h3>This is an h3 tag</h3>
+    <div id="divTag"></div>
+    <br />
+    <p id="pTag">This is just a <i>p</i> tag with some text</p>
+    <ul>
+        <li> First and only item </li>
+    </ul>
+    <div>
+        <div id="output"></div>
+    </div>
+    <script>
+        window.onload = function () {
+
+            var outEl = document.getElementById("output");
+            var str = '';
+            function traverse(el) {
+
+                str += el.nodeName + "<br>";
+
+                for (var i = 0; i < el.children.length; i++) {
+                    traverse(el.children[i]);
+                }
+
+            }
+
+            traverse(document.documentElement);
+            outEl.innerHTML = str;
+
+
+        }
+    </script>
+</body>
+
+</html>

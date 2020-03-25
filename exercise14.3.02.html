@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Capturing and Bubbling</title>
+    <style>
+        #secondDiv {
+            background: red;
+        }
+
+        #firstDiv {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="firstDiv">
+        <p>Some text</p>
+        <br />
+        <div id="secondDiv">
+            <div id="thirdDiv">
+                Click me!
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+
+    <script>
+        // Third parameter, useCapture is false and thus the event takes place at the bubbling phase.
+        // In the bubbling phase, the event occurs on the deepest element and then triggers on parents in nesting order,
+        // whereas on the capturing phase, it first occurs on the outermost element and then goes to the inner elements.
+        document.getElementById("firstDiv").addEventListener("click", myfunctiona, false);
+        function myfunctiona() {
+            alert("Hello, I am the first outer green div!");
+        }
+        document.getElementById("secondDiv").addEventListener("click", myfunctionc, false);
+        function myfunctionc() {
+            alert("Hello,I am the second red div!");
+        }
+        document.getElementById("thirdDiv").addEventListener("click", myfunctionb, false);
+        function myfunctionb() {
+            alert("I am the text in the third div!");
+        }
+    </script>
+</body>
+
+</html>

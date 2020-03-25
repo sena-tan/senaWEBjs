@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS rules to Nodes</title>
+  </head>
+  <body>
+    <h1>Apply CSS rules to Nodes</h1>
+    <ol>
+      <li>Ordered listItem 0</li>
+      <li>Ordered listItem 1</li>
+      <li>Ordered listItem 2</li>
+      <li>Ordered listItem 3</li>
+    </ol>
+    <ul>
+      <li>Unordered listItem 0</li>
+      <li>Unordered listItem 1</li>
+      <li>Unordered listItem 2</li>
+      <li>Unordered listItem 3</li>
+    </ul>
+    <script>
+      document.getElementsByTagName("ol")[0].style.color = "red"; //ol
+      document.getElementsByTagName("ul")[0].children[0].style.color = "green"; //ul>li 0
+      document.getElementsByTagName("ul")[0].children[1].style.color = "blue"; //ul>li 1
+      document.body.children[1].style.backgroundColor = "yellow"; //ul
+      document.children[0].children[1].children[2].children[3].style.fontSize = "1.5em"; //html>body>ul>li 3
+      document.body.children[2].children[2].style.backgroundColor = "orange";
+    </script>
+  </body>
+</html>

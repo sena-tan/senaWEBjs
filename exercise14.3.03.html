@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Keyboard Events</title>
+</head>
+
+<body>
+    <h1>Keyboard Events</h1>
+    <p>Press the right (left) arrow on your keyboard!</p>
+    <div>
+        The number now is :<span id="myNumb">0</span>
+    </div>
+    <script>
+        let number = 0;
+        document.addEventListener("keydown", change, false);
+        function change(evt) {
+            // right arrow
+            if (evt.which == 39 || evt.keyCode == 39) {
+                number += 1;
+                console.log(number);
+                // left arrow
+            } else if (evt.which == 37 || evt.keyCode == 37) {
+                number -= 1;
+                console.log(number);
+            }
+            document.getElementById("myNumb").innerHTML = number;
+        }
+    </script>
+</body>
+
+</html>

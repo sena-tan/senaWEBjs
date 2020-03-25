@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nodes</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="myH1">Nodes</h1>
+        <h3>Dom Tree - H2 Tag</h3>
+        <p>Paragraph</p>
+        <ul id="myList">
+            <li>Unordered listItem 1</li>
+            <li>Unordered listItem 1</li>
+            <li>Unordered listItem 2</li>
+        </ul>
+    </div>
+    <script>
+        let x = document.getElementById("myH1");
+        console.log("The node type of document is: " + document.nodeType);
+        console.log("The node type of H1 is: " + x.nodeType);
+        console.log("The length of childNodes of H1 is: " + x.childNodes.length);
+        console.log("The length of children of H1 is: " + x.children.length);
+        console.log("The next slibing of H1: " + x.nextSibling);
+        console.log("The parentElement of H1: " + x.parentElement);
+        let y = document.getElementById("myList");
+        console.log("The node type of document is: " + document.nodeType);
+        console.log("The node type of ul is: " + y.nodeType);
+        console.log("The length of childNodes of ul is: " + y.childNodes.length);
+        console.log("The length of children of ul is: " + y.children.length);
+        console.log("The next slibing of ul: " + y.nextSibling);
+        console.log("The parentElement of ul: " + y.parentElement);
+
+    </script>
+</body>
+
+</html>
